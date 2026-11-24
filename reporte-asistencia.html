@@ -1,0 +1,19 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reporte de asistencia · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body class="report-body" data-shell="none">
+<main class="content" style="padding:0;gap:0">
+<div class="report-tools"><a class="btn sm" style="background:rgba(255,255,255,.12);color:#fff" href="reportes.html"><i data-i="chevronL"></i>Volver</a><span class="f1">Plantilla · Reporte de asistencia (estándar) · A4 horizontal</span><button class="btn sm out" data-toast="Descargando rptTthAsistencia.xlsx"><i data-i="excel"></i>Excel</button><button class="btn sm pri" onclick="print()"><i data-i="imprimir"></i>Imprimir / PDF</button></div>
+<div class="sheet land">
+  <div class="rp-head"><img src="assets/img/logo-completo.png" alt=""><div class="t"><b>TALENTO HUMANO</b><b>ASISTENCIA</b></div><div class="meta">Generado: 13/11/2026 09:14<br>Usuario: landrade<br>Página 1 de 6</div></div>
+  <div class="rp-filters"><span><b>FECHA INICIO:</b> 01/11/2026</span><span><b>FECHA FIN:</b> 12/11/2026</span><span><b>AGENCIA:</b> Todas</span><span><b>DEPARTAMENTO:</b> Todos</span><span><b>TOLERANCIA:</b> 5 min</span></div>
+  <table class="rp"><thead><tr><th>Centro de costo</th><th>Cédula</th><th>Nombre</th><th>Departamento</th><th>Cargo</th><th>Fecha</th><th>Día</th><th class="c">Entr</th><th class="c">Atr 1</th><th class="c">Sal. alm</th><th class="c">Ent. alm</th><th class="c">Atr 2</th><th class="c">Salid</th><th>Observación</th></tr></thead><tbody id="rows"></tbody></table>
+  <div class="rp-foot"><span>SITH · Sistema Integral de Talento Humano · Coop Tulcán</span><span>Atrasos en rojo superan la tolerancia configurada</span></div>
+</div>
+</main>
+<script src="assets/js/app.js"></script>
+<script>
+const G={'MATRIZ TULCÁN':[['0401•••512','Paspuel Rosero Andrea','Negocios','Oficial de Negocios'],['0401•••309','Cuastumal Ruano Diana','Talento Humano','Asistente de TH'],['1724•••016','Enríquez Calderón Luis','Talento Humano','Técnico en SSO'],['0402•••450','Chamorro Vela Mariela','Cumplimiento','Oficial de Cumplimiento']],'CAYAMBE':[['1003•••644','Imbaquingo Pozo Jorge','Cobranzas','Gestor de Cobranza'],['1004•••218','Farinango Tuqueres Pablo','Negocios','Oficial de Negocios']],'EL ÁNGEL':[['0401•••188','Tapia Guerrón Paola','Operaciones','Cajera'],['0402•••771','Mejía Pozo Silvia','Captaciones','Asesora de Captaciones']],'SAN GABRIEL':[['0401•••733','Pozo Arteaga Gabriela','Captaciones','Asesora de Captaciones']]};
+let h='';const ent=['07:47','07:52','08:14','07:58','08:06','07:50','07:41','08:09'];
+for(const[g,ps] of Object.entries(G)){h+=`<tr class="grp"><td colspan="14">${g}</td></tr>`;ps.forEach((p,i)=>{const e=ent[(i+g.length)%ent.length];const late=e>'08:05';const lic=g==='EL ÁNGEL'&&i===0;h+=`<tr><td>${g}</td><td>${p[0]}</td><td>${p[1]}</td><td>${p[2]}</td><td>${p[3]}</td><td>2026-11-12</td><td>JUEVES</td>`+(lic?`<td colspan="6" class="c">LICENCIA POR MATERNIDAD</td><td>Licencia 01/11 – 23/01</td>`:`<td class="c">${e}</td><td class="c ${late?'late':''}">${late?'00:'+String(+e.slice(3)-5).padStart(2,'0'):''}</td><td class="c">13:0${i}</td><td class="c">14:0${i}</td><td class="c"></td><td class="c">17:0${i+1}</td><td>${late?'TIMBRADO '+e+' RETRASO '+(+e.slice(3)-5)+' MIN':''}</td>`)+`</tr>`;});h+=`<tr class="tot"><td colspan="7">Subtotal ${g} · ${ps.length} colaboradores</td><td colspan="7">Atrasos: ${ps.length>2?2:1}</td></tr>`;}
+document.getElementById('rows').innerHTML=h;
+</script>
+</body></html>

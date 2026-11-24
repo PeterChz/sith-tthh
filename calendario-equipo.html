@@ -1,0 +1,35 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calendario de vacaciones · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="calendario" data-ruta="Mi equipo / Calendario de vacaciones" data-role="jefe">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Calendario de vacaciones del equipo</h1><p>Agencia Ibarra · evita el cruce de vacaciones en cargos críticos</p></div>
+    <div class="seg" style="width:220px"><button>Semana</button><button class="on">Mes</button><button>Año</button></div>
+    <button class="btn out"><i data-i="chevronL"></i></button><button class="btn out">Diciembre 2026</button><button class="btn out"><i data-i="chevronR"></i></button></div>
+  <div class="note warn"><i data-i="alerta"></i><span class="f1">Cruce detectado del 21 al 23 de diciembre: 2 de 3 cajeros estarían ausentes. El mínimo operativo definido para Cajas es 2 personas.</span></div>
+  <div class="card">
+    <div class="card-h"><div class="ttl"><h3>Diciembre 2026</h3><p>14 colaboradores · 5 con vacaciones programadas</p></div>
+      <div class="legend"><span style="--c:var(--verde)">Aprobadas</span><span style="--c:var(--naranja)">Pendientes</span><span style="--c:var(--rojo)">Cruce crítico</span></div></div>
+    <div class="gantt" id="g"></div>
+  </div>
+  <div class="row">
+    <div class="card f1"><div class="card-h"><div class="ttl"><h3>Saldos del equipo</h3></div></div>
+      <div class="tbl-wrap"><table class="tbl dense"><thead><tr><th>Colaborador</th><th>Cargo</th><th class="r">Saldo</th><th class="r">Programado</th><th>Situación</th></tr></thead><tbody>
+        <tr><td class="b">Camila Rosales</td><td>Operadora de Call Center</td><td class="r">9,5</td><td class="r">0</td><td><span class="badge ok">Normal</span></td></tr>
+        <tr><td class="b">Mateo Villota</td><td>Técnico en SSO</td><td class="r">31,0</td><td class="r">5</td><td><span class="badge err">Acumulado &gt; 30</span></td></tr>
+        <tr><td class="b">Valeria Cando</td><td>Asistente de TH</td><td class="r">16,0</td><td class="r">8</td><td><span class="badge warn">Pendiente aprobación</span></td></tr>
+        <tr><td class="b">Gabriela Pozo</td><td>Asesora de Captaciones</td><td class="r">12,0</td><td class="r">3</td><td><span class="badge ok">Normal</span></td></tr>
+      </tbody></table></div></div>
+    <div class="card" style="width:380px"><div class="card-h"><div class="ttl"><h3>Reglas de planificación</h3></div></div>
+      <div class="list-item"><span class="ic-box info"><i data-i="usuarios"></i></span><div class="f1 small">Mínimo 2 cajeros por agencia en horario de atención.</div></div>
+      <div class="list-item"><span class="ic-box info"><i data-i="calendario"></i></span><div class="f1 small">Saldos mayores a 30 días deben programarse en el trimestre.</div></div>
+      <div class="list-item"><span class="ic-box info"><i data-i="escudo"></i></span><div class="f1 small">Jefaturas no pueden coincidir con su reemplazo designado.</div></div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/app.js"></script>
+<script>
+const P=[['Camila Rosales',[]],['Mateo Villota',[[14,18,'vac']]],['Valeria Cando',[[21,30,'vacp']]],['Gabriela Pozo',[[21,23,'crit']]],['Daniela Mora (Caja)',[[21,24,'crit']]],['Andrea Paspuel',[[2,6,'vac']]],['Kevin Castro',[]],['Rosa Quelal',[[28,30,'vacp']]]];
+let s='<div class="nm hd">Colaborador</div>';for(let d=1;d<=30;d++)s+=`<div class="hd">${d}</div>`;
+P.forEach(([n,r])=>{s+=`<div class="nm">${n}</div>`;for(let d=1;d<=30;d++){const wd=(d+1)%7;let c=(wd===6||wd===0)?'we':'';r.forEach(([a,b,k])=>{if(d>=a&&d<=b)c=k;});s+=`<div class="${c}"></div>`;}});
+document.getElementById('g').innerHTML=s;
+</script>
+</body></html>

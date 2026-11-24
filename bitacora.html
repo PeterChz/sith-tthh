@@ -1,0 +1,34 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bitácora de auditoría · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="bitacora" data-ruta="Administración / Bitácora de auditoría" data-role="th">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Bitácora de auditoría</h1><p>Usuario, fecha y hora, campo, valor anterior y valor nuevo en asistencia, horas extra, nómina y patrimonio (NUC-04)</p></div>
+    <button class="btn out" data-toast="Descargando bitacora_2026-11.xlsx"><i data-i="excel"></i>Exportar</button></div>
+  <div class="card">
+    <div class="row ae g12">
+      <div class="fld" style="max-width:150px"><label>Desde</label><div class="inp"><input value="01/11/2026"><i data-i="calendario"></i></div></div><div class="fld" style="max-width:150px"><label>Hasta</label><div class="inp"><input value="13/11/2026"><i data-i="calendario"></i></div></div>
+      <div class="fld" style="max-width:190px"><label>Módulo</label><div class="inp"><select><option>Todos</option><option>Asistencia</option><option>Horas extra</option><option>Nómina</option><option>Patrimonio</option><option>Parámetros</option><option>Seguridad</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld" style="max-width:160px"><label>Acción</label><div class="inp"><select><option>Todas</option><option>Crear</option><option>Editar</option><option>Eliminar</option><option>Aprobar</option><option>Consultar</option><option>Ingreso</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld"><label>Usuario o registro afectado</label><div class="inp"><i data-i="buscar"></i><input placeholder="Buscar"></div></div><button class="btn sec"><i data-i="buscar"></i>Consultar</button></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Fecha y hora</th><th>Usuario</th><th>Módulo</th><th>Acción</th><th>Registro</th><th>Campo</th><th>Valor anterior</th><th>Valor nuevo</th><th></th></tr></thead><tbody>
+      <tr><td class="nowrap">13/11/2026 08:41:12</td><td class="b">landrade</td><td>Asistencia</td><td><span class="badge warn">Editar</span></td><td>Marcación · Jorge Imbaquingo · 13/11</td><td>estado_atraso</td><td>Atraso 00:06</td><td class="b">Justificado</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="nowrap">13/11/2026 08:10:03</td><td class="b">sistema</td><td>Nómina</td><td><span class="badge info">Proceso</span></td><td>Pre-nómina nov-2026</td><td>estado</td><td>Abierta</td><td class="b">Recalculada · 3 alertas</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="nowrap">12/11/2026 17:22:40</td><td class="b">cbenavides</td><td>Horas extra</td><td><span class="badge ok">Aprobar</span></td><td>HE-311 · Jorge Imbaquingo</td><td>estado_nivel_1</td><td>Pendiente</td><td class="b">Aprobado (jefe)</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="nowrap">12/11/2026 16:05:18</td><td class="b">landrade</td><td>Nómina</td><td><span class="badge warn">Editar</span></td><td>Rubro I-001 · Diana Cuastumal</td><td>valor</td><td>$ 720,00</td><td class="b">$ 890,00</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="nowrap">12/11/2026 15:30:44</td><td class="b">apaspuel</td><td>Patrimonio</td><td><span class="badge warn">Editar</span></td><td>DP-2026-0093 · bancos</td><td>saldo</td><td>$ 3.950,00</td><td class="b">$ 4.200,00</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="nowrap">12/11/2026 11:02:19</td><td class="b">landrade</td><td>Parámetros</td><td><span class="badge warn">Editar</span></td><td>PAR-NOV-HORAS-VENCIMIENTO</td><td>valor (vigencia 13/11/2026)</td><td>48</td><td class="b">24</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr class="hl-e"><td class="nowrap">11/11/2026 23:14:51</td><td class="b">frosero</td><td>Seguridad</td><td><span class="badge err">Ingreso fallido</span></td><td>Usuario frosero</td><td>estado</td><td>Habilitado</td><td class="b">Bloqueado (5 intentos)</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="nowrap">11/11/2026 09:30:11</td><td class="b">mocupacional</td><td>SIGSO</td><td><span class="badge info">Consultar</span></td><td>Historia clínica · Rosa Quelal</td><td>—</td><td>—</td><td class="b">Acceso a información cifrada</td><td><div class="acts"><button class="act" data-modal="m-d"><i data-i="ojo"></i></button></div></td></tr>
+    </tbody></table></div>
+    <div class="pager"><span class="small muted">3.912 eventos en el período · registro inalterable</span><div class="pg"><button class="on">1</button><button>2</button><button>…</button><button>392</button></div></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-d"><div class="modal"><div class="modal-h"><h2>Evento de auditoría #9918231</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b"><div class="grid g3"><div class="kv" style="flex-direction:column"><span>Usuario</span><span style="text-align:left">landrade</span></div><div class="kv" style="flex-direction:column"><span>Fecha y hora</span><span style="text-align:left">12/11/2026 16:05:18</span></div><div class="kv" style="flex-direction:column"><span>Terminal</span><span style="text-align:left">10.10.4.21 · Chrome</span></div></div>
+    <div class="grid g2"><div class="card" style="background:var(--rojo-c);border:0"><div class="lbl" style="color:var(--rojo)">Valor anterior</div><div class="code" style="background:#fff;color:#7A2E2E">rubro: I-001
+valor: 720.00
+motivo: —</div></div><div class="card" style="background:var(--verde-c);border:0"><div class="lbl" style="color:var(--verde-o)">Valor nuevo</div><div class="code" style="background:#fff;color:#00703C">rubro: I-001
+valor: 890.00
+motivo: Acción de personal 224</div></div></div></div>
+  <div class="modal-f"><button class="btn out" data-close>Cerrar</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

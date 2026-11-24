@@ -1,0 +1,33 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Registrar retorno · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="retorno" data-ruta="Autoservicio / Registrar retorno">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Registrar retorno</h1><p>Marca tu regreso al terminar un permiso o vacaciones. El tiempo real se descuenta automáticamente.</p></div>
+    <button class="btn pri" data-modal="m-ret"><i data-i="retorno"></i>Marcar retorno</button></div>
+  <div class="note"><i data-i="info"></i><span class="f1">Si regresas antes de la hora autorizada, la diferencia vuelve a tu saldo. Si regresas después, se registra como retorno tardío según la regla configurada.</span></div>
+  <div class="card">
+    <div class="card-h"><div class="ttl"><h3>Permisos activos</h3><p>Selecciona el permiso del que estás retornando</p></div></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th style="width:36px"></th><th>Solicitud</th><th>Colaborador</th><th>Cargo</th><th>Departamento</th><th>Fecha</th><th>H. inicio</th><th>H. fin</th><th>Motivo</th></tr></thead><tbody>
+      <tr class="hl"><td><input type="checkbox" checked></td><td class="b">67003</td><td>Andrea Paspuel</td><td>Oficial de Negocios</td><td>Negocios</td><td>13/11/2026</td><td>12:00</td><td>15:00</td><td>Cita médica en el IESS</td></tr>
+      <tr><td><input type="checkbox"></td><td class="b">66058</td><td>Andrea Paspuel</td><td>Oficial de Negocios</td><td>Negocios</td><td>11/11/2026</td><td>15:00</td><td>17:30</td><td>Permiso particular</td></tr>
+    </tbody></table></div>
+    <div class="small muted">1 registro seleccionado</div>
+  </div>
+  <div class="row">
+    <div class="card f1"><div class="card-h"><div class="ttl"><h3>Historial de retornos</h3><p>Últimos 30 días</p></div></div>
+      <div class="tbl-wrap"><table class="tbl dense"><thead><tr><th>Solicitud</th><th>Tipo</th><th>Autorizado</th><th>Retorno real</th><th class="r">Diferencia</th><th>Resultado</th></tr></thead><tbody>
+        <tr><td class="b">50447</td><td>Compensación</td><td>08/11 · 14:00–17:00</td><td>16:40</td><td class="r">−20 min</td><td><span class="badge ok">Devuelto al saldo</span></td></tr>
+        <tr><td class="b">50311</td><td>Permiso particular</td><td>21/10 · 10:00–12:00</td><td>12:15</td><td class="r">+15 min</td><td><span class="badge warn">Atraso registrado</span></td></tr>
+        <tr><td class="b">50102</td><td>Permiso médico</td><td>14/10 · 08:00–12:00</td><td>11:50</td><td class="r">−10 min</td><td><span class="badge ok">Devuelto al saldo</span></td></tr>
+      </tbody></table></div></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-ret"><div class="modal sm"><div class="modal-h"><h2>Confirmar retorno</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b">
+    <div class="kv"><span>Permiso</span><span>67003 · Cita médica en el IESS</span></div>
+    <div class="kv"><span>Horario autorizado</span><span>12:00 – 15:00</span></div>
+    <div class="grid g2"><div class="fld"><label>Fecha de retorno</label><div class="inp"><input value="13/11/2026"><i data-i="calendario"></i></div></div><div class="fld"><label>Hora de retorno</label><div class="inp"><input value="14:35"><i data-i="reloj"></i></div></div></div>
+    <div class="note ok"><i data-i="check"></i><span class="f1">Retornas 25 min antes: se devolverán a tu saldo.</span></div>
+  </div>
+  <div class="modal-f"><button class="btn gho" data-close>Cancelar</button><button class="btn pri" data-toast="Retorno registrado a las 14:35"><i data-i="retorno"></i>Marcar retorno</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

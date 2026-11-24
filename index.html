@@ -1,0 +1,65 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="dashboard" data-ruta="Inicio / Dashboard" data-role="th">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Buen día, Lucía</h1><p>Resumen de Talento Humano · noviembre 2026</p></div>
+    <a class="btn out" href="reportes.html"><i data-i="descargar"></i>Exportar</a>
+    <button class="btn pri" data-modal="m-nueva"><i data-i="mas"></i>Nueva novedad</button></div>
+
+  <div class="kpis">
+    <a class="kpi" href="colaboradores.html"><span class="ic"><i data-i="usuarios"></i></span><div><div class="small muted">Colaboradores activos</div><div class="v">248</div><div class="d">+3 ingresos este mes</div></div></a>
+    <a class="kpi azul" href="asistencia.html"><span class="ic"><i data-i="huella"></i></span><div><div class="small muted">Asistencia de hoy</div><div class="v">94,2 %</div><div class="d">231 de 245 marcaron entrada</div></div></a>
+    <a class="kpi nar" href="permisos.html"><span class="ic"><i data-i="documento"></i></span><div><div class="small muted">Solicitudes pendientes</div><div class="v">17</div><div class="d">9 permisos · 8 vacaciones</div></div></a>
+    <a class="kpi roj" href="nomina.html"><span class="ic"><i data-i="billetera"></i></span><div><div class="small muted">Nómina noviembre</div><div class="v">$ 412.580</div><div class="d">Pre-cierre · 3 alertas</div></div></a>
+  </div>
+
+  <div class="row">
+    <div class="card f1">
+      <div class="card-h"><div class="ttl"><h3>Asistencia de la semana</h3><p>Marcaciones biométricas consolidadas · todas las agencias</p></div>
+        <div class="legend"><span style="--c:var(--verde)">Puntual</span><span style="--c:var(--naranja)">Atraso</span><span style="--c:var(--rojo)">Ausente</span></div></div>
+      <div class="chart-bars" id="chart"></div>
+    </div>
+    <div class="card" style="width:400px">
+      <div class="card-h"><div class="ttl"><h3>Pendientes de aprobación</h3><p>Requieren tu revisión</p></div><a class="btn gho sm" href="permisos.html">Ver todo</a></div>
+      <a class="list-item" href="vacaciones-gestion.html"><span class="avatar v">AP</span><div class="f1"><div class="b">Andrea Paspuel</div><div class="small muted">Vacaciones · 5 días (2–6 dic)</div></div><span class="badge warn">Pendiente</span></a>
+      <a class="list-item" href="permisos.html"><span class="avatar">CB</span><div class="f1"><div class="b">Carlos Benavides</div><div class="small muted">Permiso médico · 4 h</div></div><span class="badge warn">Pendiente</span></a>
+      <a class="list-item" href="horas-extras.html"><span class="avatar n">DC</span><div class="f1"><div class="b">Diana Cuastumal</div><div class="small muted">Horas extras · 6 h (50 %)</div></div><span class="badge warn">Pendiente</span></a>
+      <a class="list-item" href="permisos.html"><span class="avatar vo">JI</span><div class="f1"><div class="b">Jorge Imbaquingo</div><div class="small muted">Calamidad doméstica · 2 días</div></div><span class="badge warn">Pendiente</span></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card f1">
+      <div class="card-h"><div class="ttl"><h3>Asistencia por agencia</h3><p>Hoy · viernes 13 de noviembre de 2026</p></div><a class="btn gho sm" href="reporte-asistencia.html">Ver reporte</a></div>
+      <div class="tbl-wrap"><table class="tbl dense"><thead><tr><th>Agencia</th><th class="r">Personal</th><th class="r">Presentes</th><th class="r">Atrasos</th><th style="width:190px">Cumplimiento</th></tr></thead><tbody>
+        <tr><td class="b">Matriz Tulcán</td><td class="r">86</td><td class="r">83</td><td class="r">2</td><td><div class="row g8 ac"><div class="bar"><i style="width:96.5%"></i></div><span class="small muted">96,5 %</span></div></td></tr>
+        <tr><td class="b">Agencia Ibarra</td><td class="r">34</td><td class="r">32</td><td class="r">1</td><td><div class="row g8 ac"><div class="bar"><i style="width:94.1%"></i></div><span class="small muted">94,1 %</span></div></td></tr>
+        <tr><td class="b">Agencia El Ángel</td><td class="r">18</td><td class="r">17</td><td class="r">1</td><td><div class="row g8 ac"><div class="bar"><i style="width:94.4%"></i></div><span class="small muted">94,4 %</span></div></td></tr>
+        <tr><td class="b">Agencia San Gabriel</td><td class="r">21</td><td class="r">19</td><td class="r">2</td><td><div class="row g8 ac"><div class="bar n"><i style="width:90.5%"></i></div><span class="small muted">90,5 %</span></div></td></tr>
+        <tr><td class="b">Agencia Cayambe</td><td class="r">26</td><td class="r">25</td><td class="r">0</td><td><div class="row g8 ac"><div class="bar"><i style="width:96.2%"></i></div><span class="small muted">96,2 %</span></div></td></tr>
+        <tr><td class="b">Agencia Quito</td><td class="r">32</td><td class="r">29</td><td class="r">3</td><td><div class="row g8 ac"><div class="bar n"><i style="width:90.6%"></i></div><span class="small muted">90,6 %</span></div></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="card" style="width:400px">
+      <div class="card-h"><div class="ttl"><h3>Alertas del sistema</h3><p>Generadas automáticamente</p></div></div>
+      <a class="list-item" href="inasistencias.html"><span class="ic-box err"><i data-i="alerta"></i></span><div class="f1"><div class="b">4 marcaciones omitidas</div><div class="small muted">Bloquean el cierre del período de asistencia</div></div></a>
+      <a class="list-item" href="nomina.html"><span class="ic-box warn"><i data-i="billetera"></i></span><div class="f1"><div class="b">3 desviaciones de nómina &gt; 15 %</div><div class="small muted">Revisar antes del cierre definitivo</div></div></a>
+      <a class="list-item" href="sigso.html"><span class="ic-box warn"><i data-i="salud"></i></span><div class="f1"><div class="b">6 exámenes ocupacionales por vencer</div><div class="small muted">SIGSO · próximos 30 días</div></div></a>
+      <a class="list-item" href="vinculacion.html"><span class="ic-box info"><i data-i="documento"></i></span><div class="f1"><div class="b">5 contratos eventuales por vencer</div><div class="small muted">Diciembre 2026</div></div></a>
+      <a class="list-item" href="patrimonio.html"><span class="ic-box info"><i data-i="casa"></i></span><div class="f1"><div class="b">12 declaraciones patrimoniales pendientes</div><div class="small muted">Plazo: 30 de noviembre</div></div></a>
+    </div>
+  </div>
+</main>
+
+<div class="modal-bg" id="m-nueva"><div class="modal sm"><div class="modal-h"><h2>Registrar novedad</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b">
+    <a class="list-item" href="colaboradores.html"><span class="ic-box ok"><i data-i="personaMas"></i></span><div class="f1"><div class="b">Nuevo colaborador</div><div class="small muted">Alta y ficha completa</div></div></a>
+    <a class="list-item" href="permisos.html"><span class="ic-box info"><i data-i="documento"></i></span><div class="f1"><div class="b">Permiso o licencia</div><div class="small muted">Registrar a nombre de un colaborador</div></div></a>
+    <a class="list-item" href="acciones-personal.html"><span class="ic-box warn"><i data-i="firma"></i></span><div class="f1"><div class="b">Acción de personal</div><div class="small muted">Ascenso, encargo, traslado, memorando</div></div></a>
+    <a class="list-item" href="inasistencias.html"><span class="ic-box err"><i data-i="alerta"></i></span><div class="f1"><div class="b">Justificar inasistencia</div><div class="small muted">Omisiones y atrasos</div></div></a>
+  </div></div></div>
+<script src="assets/js/app.js"></script>
+<script>
+const d=[['Lun',226,12,7],['Mar',229,10,6],['Mié',224,15,6],['Jue',231,9,5],['Vie',219,18,8],['Sáb',62,3,1]];
+document.getElementById('chart').innerHTML=d.map(([n,a,b,c])=>`<div class="b"><span class="lbl">${a}</span><div class="stack"><i style="height:${c*.62}px;background:var(--rojo)"></i><i style="height:${b*.62}px;background:var(--naranja)"></i><i style="height:${a*.62}px;background:var(--verde)"></i></div><span class="small muted">${n}</span></div>`).join('');
+</script>
+</body></html>

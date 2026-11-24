@@ -1,0 +1,33 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Control de retornos · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="retornos" data-ruta="Novedades / Control de retornos" data-role="th">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Control de retornos</h1><p>Permisos y vacaciones finalizados que aún no registran retorno</p></div>
+    <button class="btn out"><i data-i="excel"></i>Exportar</button><button class="btn pri" data-toast="Recordatorio enviado a 5 colaboradores"><i data-i="correo"></i>Enviar recordatorios</button></div>
+  <div class="kpis">
+    <div class="kpi roj"><span class="ic"><i data-i="alerta"></i></span><div><div class="small muted">Sin retorno registrado</div><div class="v">5</div><div class="d">Más de 24 h de vencido: 2</div></div></div>
+    <div class="kpi"><span class="ic"><i data-i="retorno"></i></span><div><div class="small muted">Retornos hoy</div><div class="v">11</div><div class="d">8 a tiempo · 3 anticipados</div></div></div>
+    <div class="kpi nar"><span class="ic"><i data-i="reloj"></i></span><div><div class="small muted">Retornos tardíos (nov)</div><div class="v">6</div><div class="d">Registrados como atraso</div></div></div>
+    <div class="kpi azul"><span class="ic"><i data-i="calendario"></i></span><div><div class="small muted">De vacaciones hoy</div><div class="v">9</div><div class="d">Retornan esta semana: 4</div></div></div>
+  </div>
+  <div class="card">
+    <div class="row ae g12">
+      <div class="fld" style="max-width:200px"><label>Agencia</label><div class="inp"><select><option>Todas</option><option>Matriz Tulcán</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld" style="max-width:200px"><label>Tipo</label><div class="inp"><select><option>Permisos y vacaciones</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld" style="max-width:200px"><label>Estado</label><div class="inp"><select><option>Pendiente de retorno</option><option>Retornado</option></select><i data-i="chevron"></i></div></div><span class="f1"></span><button class="btn sec"><i data-i="buscar"></i>Consultar</button></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Solicitud</th><th>Colaborador</th><th>Agencia</th><th>Tipo</th><th>Fin autorizado</th><th class="r">Vencido hace</th><th>Estado</th><th></th></tr></thead><tbody>
+      <tr class="hl-e"><td class="b">50431</td><td><div class="person"><span class="avatar">FR</span><div><div class="nm">Fernando Rosero</div><div class="sub">Oficial de Crédito</div></div></div></td><td>Agencia Quito</td><td>Vacaciones</td><td>10/11/2026 17:00</td><td class="r b" style="color:var(--rojo)">3 días</td><td><span class="badge err">Sin retorno</span></td><td><div class="acts"><button class="act" data-modal="m-man"><i data-i="editar"></i></button><button class="act" data-toast="Recordatorio enviado"><i data-i="correo"></i></button></div></td></tr>
+      <tr class="hl-e"><td class="b">50455</td><td><div class="person"><span class="avatar n">MC</span><div><div class="nm">Mariela Chamorro</div><div class="sub">Oficial de Cumplimiento</div></div></div></td><td>Matriz Tulcán</td><td>Permiso particular</td><td>12/11/2026 12:00</td><td class="r b" style="color:var(--rojo)">1 día</td><td><span class="badge err">Sin retorno</span></td><td><div class="acts"><button class="act" data-modal="m-man"><i data-i="editar"></i></button><button class="act" data-toast="Recordatorio enviado"><i data-i="correo"></i></button></div></td></tr>
+      <tr><td class="b">50466</td><td><div class="person"><span class="avatar vo">LE</span><div><div class="nm">Luis Enríquez</div><div class="sub">Técnico en SSO</div></div></div></td><td>Matriz Tulcán</td><td>Permiso médico</td><td>13/11/2026 11:00</td><td class="r">3 h</td><td><span class="badge warn">Pendiente</span></td><td><div class="acts"><button class="act" data-modal="m-man"><i data-i="editar"></i></button><button class="act" data-toast="Recordatorio enviado"><i data-i="correo"></i></button></div></td></tr>
+      <tr><td class="b">50470</td><td><div class="person"><span class="avatar">GP</span><div><div class="nm">Gabriela Pozo</div><div class="sub">Asesora de Captaciones</div></div></div></td><td>Agencia San Gabriel</td><td>Compensación</td><td>13/11/2026 12:30</td><td class="r">2 h</td><td><span class="badge warn">Pendiente</span></td><td><div class="acts"><button class="act" data-modal="m-man"><i data-i="editar"></i></button><button class="act" data-toast="Recordatorio enviado"><i data-i="correo"></i></button></div></td></tr>
+      <tr><td class="b">50447</td><td><div class="person"><span class="avatar v">AP</span><div><div class="nm">Andrea Paspuel</div><div class="sub">Oficial de Negocios</div></div></div></td><td>Matriz Tulcán</td><td>Compensación</td><td>08/11/2026 17:00</td><td class="r">—</td><td><span class="badge ok">Retornó 16:40</span></td><td><div class="acts"><button class="act"><i data-i="ojo"></i></button></div></td></tr>
+    </tbody></table></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-man"><div class="modal sm"><div class="modal-h"><h2>Registrar retorno manual</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b"><div class="note warn"><i data-i="alerta"></i><span class="f1">Quedará registrado en la bitácora de auditoría con tu usuario.</span></div>
+    <div class="grid g2"><div class="fld"><label>Fecha de retorno</label><div class="inp"><input value="11/11/2026"><i data-i="calendario"></i></div></div><div class="fld"><label>Hora</label><div class="inp"><input value="08:02"><i data-i="reloj"></i></div></div></div>
+    <div class="fld"><label>Tratamiento de la diferencia</label><div class="inp"><select><option>Registrar como retorno tardío</option><option>Justificar sin descuento</option><option>Cargo a vacaciones (decisión de TH)</option></select><i data-i="chevron"></i></div></div>
+    <div class="fld"><label>Observación <span class="req">*</span></label><textarea class="ta">Retornó el 11/11 según marcación biométrica; no registró en el sistema.</textarea></div></div>
+  <div class="modal-f"><button class="btn gho" data-close>Cancelar</button><button class="btn pri" data-toast="Retorno registrado"><i data-i="check"></i>Guardar</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

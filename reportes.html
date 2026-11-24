@@ -1,0 +1,38 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Centro de reportes · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="reportes" data-ruta="Reportes / Centro de reportes" data-role="th">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Centro de reportes</h1><p>Reportes operativos y estratégicos exportables a Excel y PDF (TRV-03) · filtros por agencia, departamento y colaborador</p></div>
+    <div class="fld" style="max-width:300px"><div class="inp"><i data-i="buscar"></i><input placeholder="Buscar reporte"></div></div></div>
+  <div class="row as">
+    <div class="card" style="width:360px"><div class="card-h"><div class="ttl"><h3>Parámetros</h3><p>Asistencia (estándar)</p></div></div>
+      <div class="fld"><label>Formato</label><div class="seg"><button class="on">PDF</button><button>Excel</button></div></div>
+      <div class="grid g2"><div class="fld"><label>Desde <span class="req">*</span></label><div class="inp"><input value="01/11/2026"><i data-i="calendario"></i></div></div><div class="fld"><label>Hasta <span class="req">*</span></label><div class="inp"><input value="12/11/2026"><i data-i="calendario"></i></div></div></div>
+      <div class="fld"><label>Agencia</label><div class="inp"><select><option>Todas</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld"><label>Departamento</label><div class="inp"><select><option>Todos</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld"><label>Colaborador</label><div class="inp"><input placeholder="Todos"><i data-i="buscar"></i></div></div>
+      <div class="fld"><label>Agrupar por</label><div class="inp"><select><option>Centro de costo</option><option>Departamento</option></select><i data-i="chevron"></i></div></div>
+      <a class="btn pri" style="justify-content:center" href="reporte-asistencia.html"><i data-i="reportes"></i>Generar reporte</a></div>
+    <div class="col f1">
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Asistencia</h3></div></div>
+        <div class="grid g2">
+          <a class="list-item card" style="padding:14px" href="reporte-asistencia.html"><span class="ic-box ok"><i data-i="reloj"></i></span><div class="f1"><div class="b">Asistencia (estándar)</div><div class="small muted">Entrada, almuerzo, salida, atrasos y observaciones</div></div><span class="badge ok">PDF · Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="reporte-marcaciones.html"><span class="ic-box ok"><i data-i="huella"></i></span><div class="f1"><div class="b">Marcaciones reales</div><div class="small muted">Registros crudos por dispositivo</div></div><span class="badge ok">PDF · Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="inasistencias.html"><span class="ic-box err"><i data-i="alerta"></i></span><div class="f1"><div class="b">Consolidado de ausentismo</div><div class="small muted">Mensual por agencia o departamento</div></div><span class="badge neu">Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="horas-extras.html"><span class="ic-box info"><i data-i="horasExtra"></i></span><div class="f1"><div class="b">Horas extras autorizadas</div><div class="small muted">Por colaborador y recargo</div></div><span class="badge neu">Excel</span></a></div></div>
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Novedades y personal</h3></div></div>
+        <div class="grid g2">
+          <a class="list-item card" style="padding:14px" href="reporte-vacaciones.html"><span class="ic-box ok"><i data-i="calendario"></i></span><div class="f1"><div class="b">Saldo de vacaciones</div><div class="small muted">Individual o total institucional</div></div><span class="badge ok">PDF · Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="reporte-patrimonial.html"><span class="ic-box warn"><i data-i="casa"></i></span><div class="f1"><div class="b">Declaración patrimonial</div><div class="small muted">Formato oficial firmado</div></div><span class="badge ok">PDF</span></a>
+          <a class="list-item card" style="padding:14px" href="colaboradores.html"><span class="ic-box info"><i data-i="usuarios"></i></span><div class="f1"><div class="b">Gestión de personal</div><div class="small muted">32 campos · ficha completa</div></div><span class="badge neu">Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="vinculados.html"><span class="ic-box info"><i data-i="enlace"></i></span><div class="f1"><div class="b">Vinculados</div><div class="small muted">Parentesco y consanguinidad</div></div><span class="badge neu">PDF · Excel</span></a></div></div>
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Nómina</h3></div></div>
+        <div class="grid g2">
+          <a class="list-item card" style="padding:14px" href="nomina.html"><span class="ic-box ok"><i data-i="billetera"></i></span><div class="f1"><div class="b">Rol de pagos general</div><div class="small muted">Ingresos, egresos y beneficios de ley</div></div><span class="badge neu">PDF · Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="nomina.html"><span class="ic-box warn"><i data-i="tendencia"></i></span><div class="f1"><div class="b">Costo de nómina vs. presupuesto</div><div class="small muted">Analítico mensual</div></div><span class="badge neu">Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="nomina.html"><span class="ic-box info"><i data-i="documento"></i></span><div class="f1"><div class="b">Rol de provisiones</div><div class="small muted">Décimos, fondos de reserva, vacaciones</div></div><span class="badge neu">PDF · Excel</span></a>
+          <a class="list-item card" style="padding:14px" href="nomina.html"><span class="ic-box info"><i data-i="banco"></i></span><div class="f1"><div class="b">Impuesto a la renta</div><div class="small muted">Proyección y retenciones</div></div><span class="badge neu">Excel</span></a></div></div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/app.js"></script>
+</body></html>

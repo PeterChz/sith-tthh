@@ -1,0 +1,40 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Consulta de asistencia · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="asistencia" data-ruta="Asistencia / Consulta de asistencia">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Consulta de asistencia</h1><p>Asistencia consolidada (entrada, almuerzo y salida) por funcionario, agencia o departamento</p></div>
+    <a class="btn out" href="reporte-asistencia.html"><i data-i="pdf"></i>Reporte estándar</a><button class="btn out" data-toast="Descargando rptTthAsistencia.xlsx"><i data-i="excel"></i>Excel</button><button class="btn pri" data-modal="m-cierre"><i data-i="check"></i>Cerrar período</button></div>
+  <div class="note err"><i data-i="alerta"></i><span class="f1">Hay 4 omisiones de marcación sin justificar. El cierre del período está bloqueado hasta resolverlas.</span><a class="btn sm" style="background:#fff;color:var(--rojo)" href="inasistencias.html">Resolver</a></div>
+  <div class="kpis">
+    <div class="kpi"><span class="ic"><i data-i="huella"></i></span><div><div class="small muted">Marcaron hoy</div><div class="v">231 / 245</div><div class="d">Entrada registrada</div></div></div>
+    <div class="kpi nar"><span class="ic"><i data-i="reloj"></i></span><div><div class="small muted">Atrasos del período</div><div class="v">37</div><div class="d">12 justificados · 412 min</div></div></div>
+    <div class="kpi roj"><span class="ic"><i data-i="alerta"></i></span><div><div class="small muted">Omisiones de marcación</div><div class="v">4</div><div class="d">Bloquean el cierre</div></div></div>
+    <div class="kpi azul"><span class="ic"><i data-i="escudo"></i></span><div><div class="small muted">Personal de confianza</div><div class="v">31</div><div class="d">Control flexible · sin alertas</div></div></div>
+  </div>
+  <div class="card">
+    <div class="row ae g12">
+      <div class="fld"><label>Funcionario</label><div class="inp"><input placeholder="Todos · buscar por nombre o cédula"><i data-i="buscar"></i></div></div>
+      <div class="fld" style="max-width:150px"><label>Fecha desde <span class="req">*</span></label><div class="inp"><input value="01/11/2026"><i data-i="calendario"></i></div></div>
+      <div class="fld" style="max-width:150px"><label>Fecha hasta <span class="req">*</span></label><div class="inp"><input value="13/11/2026"><i data-i="calendario"></i></div></div>
+      <div class="fld" style="max-width:170px"><label>Agencia</label><div class="inp"><select><option>Matriz Tulcán</option><option>Todas</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld" style="max-width:190px"><label>Departamento</label><div class="inp"><select><option>Todos</option></select><i data-i="chevron"></i></div></div>
+      <button class="btn sec"><i data-i="buscar"></i>Consultar</button></div>
+    <div class="chips"><span class="chip on">Todos</span><span class="chip">Puntuales</span><span class="chip">Con atraso</span><span class="chip">Con omisión</span><span class="chip">Personal de confianza</span><span class="chip">Con permiso</span></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Identificación</th><th>Funcionario</th><th>Departamento</th><th>Sucursal</th><th>Fecha</th><th>Día</th><th class="c">Entrada</th><th class="c">Atr. 1</th><th class="c">Sal. A</th><th class="c">Entr. A</th><th class="c">Atr. 2</th><th class="c">Salida</th><th>Estado</th></tr></thead><tbody>
+      <tr><td>0401•••512</td><td class="b">Andrea Paspuel</td><td>Negocios</td><td>Matriz</td><td>13/11</td><td>Viernes</td><td class="c">07:52</td><td class="c">—</td><td class="c">13:01</td><td class="c">13:58</td><td class="c">—</td><td class="c">17:04</td><td><span class="badge ok">Puntual</span></td></tr>
+      <tr class="hl-w"><td>0401•••309</td><td class="b">Diana Cuastumal</td><td>Talento Humano</td><td>Matriz</td><td>13/11</td><td>Viernes</td><td class="c">08:14</td><td class="c b" style="color:#C26F00">00:14</td><td class="c">13:00</td><td class="c">14:02</td><td class="c">00:02</td><td class="c">17:10</td><td><span class="badge warn">Atraso</span></td></tr>
+      <tr><td>0400•••927</td><td class="b">Santiago Revelo</td><td>Dirección Adm. Financiera</td><td>Matriz</td><td>13/11</td><td>Viernes</td><td class="c">09:05</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td><span class="badge info">Registro flexible</span></td></tr>
+      <tr class="hl-e"><td>1724•••016</td><td class="b">Luis Enríquez</td><td>Talento Humano</td><td>Matriz</td><td>13/11</td><td>Viernes</td><td class="c">07:58</td><td class="c">—</td><td class="c b" style="color:var(--rojo)">Sin marca</td><td class="c">14:00</td><td class="c">—</td><td class="c">17:02</td><td><span class="badge err">Omisión</span></td></tr>
+      <tr><td>0401•••733</td><td class="b">Gabriela Pozo</td><td>Captaciones</td><td>San Gabriel</td><td>13/11</td><td>Viernes</td><td class="c">07:49</td><td class="c">—</td><td class="c">12:30</td><td class="c">13:29</td><td class="c">—</td><td class="c">16:58</td><td><span class="badge ok">Puntual</span></td></tr>
+      <tr><td>0402•••450</td><td class="b">Mariela Chamorro</td><td>Cumplimiento</td><td>Matriz</td><td>13/11</td><td>Viernes</td><td class="c">08:31</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c">—</td><td><span class="badge info">Registro flexible</span></td></tr>
+      <tr><td>1003•••644</td><td class="b">Jorge Imbaquingo</td><td>Cobranzas</td><td>Cayambe</td><td>13/11</td><td>Viernes</td><td class="c">08:06</td><td class="c">00:06</td><td class="c">13:02</td><td class="c">14:03</td><td class="c">—</td><td class="c">17:05</td><td><span class="badge ok">Justificado</span></td></tr>
+      <tr><td>0401•••188</td><td class="b">Paola Tapia</td><td>Operaciones</td><td>El Ángel</td><td>13/11</td><td>Viernes</td><td class="c" colspan="6" style="color:var(--azul)">Licencia por maternidad (01/11 – 23/01)</td><td><span class="badge info">Licencia</span></td></tr>
+    </tbody></table></div>
+    <div class="pager"><span class="small muted">Funcionario de confianza: sin horario fijo; solo registra pique de entrada; sin atrasos ni horas extra comunes. Tolerancia: 5 min (configurable).</span><div class="pg"><button class="on">1</button><button>2</button><button>3</button><button>›</button></div></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-cierre"><div class="modal sm"><div class="modal-h"><h2>Cierre del período de asistencia</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b"><div class="note err"><i data-i="alerta"></i><span class="f1">No es posible cerrar: existen 4 omisiones sin justificar.</span></div>
+    <div class="kv"><span>Período</span><span>01/11/2026 – 30/11/2026</span></div><div class="kv"><span>Atrasos a descontar</span><span>25 (318 min)</span></div><div class="kv"><span>Horas extras autorizadas</span><span>128 h → nómina</span></div></div>
+  <div class="modal-f"><button class="btn gho" data-close>Cerrar</button><a class="btn pri" href="inasistencias.html"><i data-i="alerta"></i>Ir a inasistencias</a></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

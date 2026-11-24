@@ -1,0 +1,52 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Iniciar sesión · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-shell="none">
+<main class="content" style="padding:0">
+<div class="login">
+  <section class="hero">
+    <div class="row ac g12"><span class="brand" style="padding:0;background:none"><span class="logo"><img src="assets/img/logo-isotipo.png" alt=""></span></span>
+      <div><div class="lbl" style="color:#CDEBD9">Cooperativa de Ahorro y Crédito</div><div style="font-family:var(--f-t);font-weight:700;font-size:22px">TULCÁN LTDA.</div></div></div>
+    <div style="max-width:520px;position:relative;z-index:1">
+      <div class="lbl" style="color:#CDEBD9;margin-bottom:10px">SITH · Sistema Integral de Talento Humano</div>
+      <h1 style="font-size:38px;line-height:46px">Gestión del talento humano, en un solo lugar.</h1>
+      <p style="margin-top:14px;font-size:16px;line-height:24px;color:#DDF2E6">Asistencia biométrica, permisos, vacaciones, nómina, salud ocupacional y reportería — con trazabilidad completa para auditoría.</p>
+      <div class="row g16" style="margin-top:28px">
+        <div><div style="font-family:var(--f-t);font-size:26px;font-weight:700">248</div><div class="small" style="color:#CDEBD9">colaboradores</div></div>
+        <div><div style="font-family:var(--f-t);font-size:26px;font-weight:700">10</div><div class="small" style="color:#CDEBD9">agencias</div></div>
+        <div><div style="font-family:var(--f-t);font-size:26px;font-weight:700">55</div><div class="small" style="color:#CDEBD9">años sirviendo</div></div>
+      </div>
+    </div>
+    <div class="small" style="color:#BFE3CF">“Sembrando un futuro juntos” · © 2026 Cooperativa de Ahorro y Crédito Tulcán Ltda.</div>
+  </section>
+  <section class="form">
+    <div class="box" id="step1">
+      <img src="assets/img/logo-completo.png" alt="Coop Tulcán" style="width:180px">
+      <div><h2>Iniciar sesión</h2><p class="muted">Ingresa con tu usuario institucional</p></div>
+      <div class="fld"><label>Usuario</label><div class="inp"><i data-i="persona"></i><input value="landrade"></div></div>
+      <div class="fld"><label>Contraseña</label><div class="inp"><i data-i="candado"></i><input type="password" value="••••••••••"></div></div>
+      <div class="row jb ac"><label class="chk"><input type="checkbox" checked> Recordarme</label><a href="#" class="b" style="color:var(--verde-o)">¿Olvidaste tu contraseña?</a></div>
+      <button class="btn pri" style="justify-content:center;height:44px" onclick="document.getElementById('step1').style.display='none';document.getElementById('step2').style.display='flex'">Ingresar</button>
+      <div class="note"><i data-i="info"></i><span class="f1 small">Token de acceso de 15 min con renovación segura · las acciones quedan en la bitácora de auditoría.</span></div>
+    </div>
+    <div class="box" id="step2" style="display:none;width:520px">
+      <div><h2>Perfiles de usuario</h2><p class="muted">Tu usuario tiene varios perfiles. Elige con cuál trabajar.</p></div>
+      <div class="role-grid">
+        <div class="role on" data-r="th"><i data-i="escudo"></i>Talento Humano</div>
+        <div class="role" data-r="jefe"><i data-i="usuarios"></i>Jefe departamental</div>
+        <div class="role" data-r="emp"><i data-i="persona"></i>Empleado</div>
+        <div class="role" data-r="th"><i data-i="billetera"></i>Contabilidad</div>
+        <div class="role" data-r="th"><i data-i="usuarios"></i>RRHH</div>
+        <div class="role" data-r="emp"><i data-i="enlace"></i>Vinculados crédito</div>
+      </div>
+      <button class="btn pri" style="justify-content:center;height:44px" id="go">Continuar</button>
+      <a class="small muted" href="mapa.html" style="text-align:center">Ver mapa completo del prototipo</a>
+    </div>
+  </section>
+</div>
+</main>
+<script src="assets/js/app.js"></script>
+<script>
+  let sel='th';
+  document.querySelectorAll('.role').forEach(r=>r.onclick=()=>{document.querySelectorAll('.role').forEach(x=>x.classList.remove('on'));r.classList.add('on');sel=r.dataset.r;});
+  document.getElementById('go').onclick=()=>{localStorage.setItem('sith-role',sel);location.href={th:'index.html',jefe:'bandeja-jefatura.html',emp:'portal.html'}[sel];};
+</script>
+</body></html>

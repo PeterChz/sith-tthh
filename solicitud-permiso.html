@@ -1,0 +1,53 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Solicitar permiso · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="solicitud" data-ruta="Autoservicio / Solicitar permiso">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Solicitar permiso</h1><p>Se envía a tu jefe inmediato y se notifica a Talento Humano · estados: Borrador → Pendiente → Aprobada / Rechazada / Vencida / Anulada</p></div>
+    <a class="btn out" href="mis-solicitudes.html"><i data-i="lista"></i>Mis solicitudes</a></div>
+  <div class="steps card" style="flex-direction:row">
+    <div class="step cur"><span class="n">1</span><div class="tx"><div class="b">Solicitud</div><div class="small muted">Completa el formulario y adjunta el respaldo</div></div></div>
+    <div class="step"><span class="n">2</span><div class="tx"><div class="b">Jefe inmediato</div><div class="small muted">Aprueba o rechaza · plazo 24 h (configurable)</div></div></div>
+    <div class="step"><span class="n">3</span><div class="tx"><div class="b">Si vence el plazo</div><div class="small muted">Se escala a Talento Humano (configurable)</div></div></div>
+    <div class="step"><span class="n">4</span><div class="tx"><div class="b">En curso → Retornado</div><div class="small muted">Registras la hora real de regreso</div></div></div>
+  </div>
+  <div class="row as">
+    <div class="card f1">
+      <div class="card-h"><div class="ttl"><h3>Datos del permiso</h3><p>Los campos con * son obligatorios</p></div></div>
+      <div class="grid g2">
+        <div class="fld span2"><label>Tipo de licencia o permiso <span class="req">*</span></label><div class="inp"><select><optgroup label="Licencias (sin cargo a vacaciones)"><option>Licencia médica</option><option>Calamidad doméstica</option><option>Licencia por maternidad</option><option>Licencia por paternidad</option><option>Licencia oficial</option></optgroup><optgroup label="Permisos con cargo a vacaciones"><option>Permiso particular</option><option>Permiso personal</option></optgroup></select><i data-i="chevron"></i></div></div>
+        <div class="fld span2"><label>Modalidad</label><div class="seg"><button class="on" data-show=".por-horas" data-hide=".por-dias">Por horas</button><button data-show=".por-dias" data-hide=".por-horas">Por días</button></div></div>
+        <div class="fld por-horas"><label>Fecha <span class="req">*</span></label><div class="inp"><input value="18/11/2026"><i data-i="calendario"></i></div></div>
+        <div class="fld por-horas"><div class="row g12"><div class="fld"><label>Desde <span class="req">*</span></label><div class="inp"><input value="09:00"><i data-i="reloj"></i></div></div><div class="fld"><label>Hasta <span class="req">*</span></label><div class="inp"><input value="13:00"><i data-i="reloj"></i></div></div></div></div>
+        <div class="fld por-dias" style="display:none"><label>Fecha inicio <span class="req">*</span></label><div class="inp"><input value="18/11/2026"><i data-i="calendario"></i></div></div>
+        <div class="fld por-dias" style="display:none"><label>Fecha fin <span class="req">*</span></label><div class="inp"><input value="19/11/2026"><i data-i="calendario"></i></div></div>
+        <div class="fld span2"><label class="chk"><input type="checkbox"> Con cargo a vacaciones · descuento: minutos ÷ 480 (configurable)</label></div>
+        <div class="fld span2"><label>Motivo <span class="req">*</span></label><textarea class="ta">Cita de control en el IESS – especialidad traumatología.</textarea></div>
+        <div class="fld span2"><label>Documento de respaldo <span class="req">*</span></label>
+          <div class="upload"><i data-i="subir"></i><div class="b" style="color:var(--verde-o)">Arrastra o selecciona el justificativo (PDF o imagen)</div><div class="small muted">Obligatorio para permisos médicos y calamidad doméstica · máx. 5 MB</div></div></div>
+      </div>
+      <hr class="divider">
+      <div class="row je g8"><a class="btn gho" href="portal.html">Cancelar</a><button class="btn out" data-toast="Borrador guardado"><i data-i="check"></i>Guardar borrador</button><button class="btn pri" data-modal="m-ok"><i data-i="enviar"></i>Enviar solicitud</button></div>
+    </div>
+    <div class="col" style="width:360px">
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Resumen</h3></div></div>
+        <div class="kv"><span>Tiempo solicitado</span><span>4 horas</span></div>
+        <div class="kv"><span>Aprobador 1</span><span>Carlos Benavides</span></div>
+        <div class="kv"><span>Si vence (24 h)</span><span>Escala a Talento Humano</span></div>
+        <div class="kv"><span>Saldo de vacaciones</span><span>18,5 días</span></div>
+        <div class="kv"><span>Permisos este mes</span><span>3 h</span></div>
+      </div>
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Licencias y permisos</h3><p>Catálogo oficial por confirmar con Talento Humano (H-02)</p></div></div>
+        <div class="list-item"><span class="ic-box info"><i data-i="salud"></i></span><div class="f1"><div class="b">Licencia médica</div><div class="small muted">Sin cargo a vacaciones · certificado obligatorio</div></div></div>
+        <div class="list-item"><span class="ic-box err"><i data-i="alerta"></i></span><div class="f1"><div class="b">Calamidad doméstica</div><div class="small muted">Licencia sin cargo · respaldo obligatorio</div></div></div>
+        <div class="list-item"><span class="ic-box ok"><i data-i="usuarios"></i></span><div class="f1"><div class="b">Maternidad / Paternidad</div><div class="small muted">Licencia sin cargo a vacaciones</div></div></div>
+        <div class="list-item"><span class="ic-box warn"><i data-i="reloj"></i></span><div class="f1"><div class="b">Particular / personal</div><div class="small muted">Con cargo a vacaciones</div></div></div>
+      </div>
+    </div>
+  </div>
+</main>
+<div class="modal-bg" id="m-ok"><div class="modal sm"><div class="modal-b" style="align-items:center;text-align:center;padding:32px">
+  <span class="ic-box ok" style="width:64px;height:64px;border-radius:50%"><i data-i="check" style=""></i></span>
+  <h2>Solicitud enviada</h2><p class="muted">La solicitud <b>N.º 50468</b> fue enviada a Carlos Benavides. Recibirás una notificación cuando sea revisada.</p>
+  <div class="row g8"><a class="btn out" href="portal.html">Ir a mi portal</a><a class="btn pri" href="mis-solicitudes.html">Ver mis solicitudes</a></div>
+</div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

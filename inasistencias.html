@@ -1,0 +1,40 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inasistencias · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="inasistencias" data-ruta="Asistencia / Inasistencias y omisiones" data-role="th">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Inasistencias y omisiones</h1><p>Detección automática de faltas, omisiones de marcación y atrasos para justificar o descontar</p></div>
+    <button class="btn out"><i data-i="excel"></i>Exportar</button><button class="btn pri" data-toast="Notificación enviada a jefaturas"><i data-i="correo"></i>Notificar a jefaturas</button></div>
+  <div class="kpis">
+    <div class="kpi roj"><span class="ic"><i data-i="alerta"></i></span><div><div class="small muted">Omisiones sin justificar</div><div class="v">4</div><div class="d">Bloquean el cierre del período</div></div></div>
+    <div class="kpi nar"><span class="ic"><i data-i="persona"></i></span><div><div class="small muted">Inasistencias</div><div class="v">3</div><div class="d">Día completo sin marcación</div></div></div>
+    <div class="kpi azul"><span class="ic"><i data-i="reloj"></i></span><div><div class="small muted">Atrasos por justificar</div><div class="v">25</div><div class="d">318 minutos</div></div></div>
+    <div class="kpi"><span class="ic"><i data-i="check"></i></span><div><div class="small muted">Justificadas (nov)</div><div class="v">19</div><div class="d">Con respaldo digital</div></div></div>
+  </div>
+  <div class="card">
+    <div class="tabs" data-tabs="in"><button class="on" data-tab="o">Omisiones (4)</button><button data-tab="i">Inasistencias (3)</button><button data-tab="a">Atrasos (25)</button><button data-tab="j">Justificadas</button></div>
+    <div class="tab-panel on" data-group="in" data-tab="o"><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Colaborador</th><th>Agencia</th><th>Fecha</th><th>Marcación faltante</th><th>Marcas registradas</th><th>Detectado</th><th>Estado</th><th></th></tr></thead><tbody>
+      <tr class="hl-e"><td><div class="person"><span class="avatar vo">LE</span><div><div class="nm">Luis Enríquez</div><div class="sub">Técnico en SSO</div></div></div></td><td>Matriz Tulcán</td><td>13/11/2026</td><td><span class="badge err">Salida almuerzo</span></td><td>07:58 · 14:00 · 17:02</td><td>Automático</td><td><span class="badge err">Sin justificar</span></td><td><div class="acts"><button class="btn pri sm" data-modal="m-just">Justificar</button></div></td></tr>
+      <tr class="hl-e"><td><div class="person"><span class="avatar n">KC</span><div><div class="nm">Kevin Castro</div><div class="sub">Oficial de Crédito</div></div></div></td><td>Agencia Sangolquí</td><td>12/11/2026</td><td><span class="badge err">Salida</span></td><td>07:55 · 13:00 · 14:01</td><td>Automático</td><td><span class="badge err">Sin justificar</span></td><td><div class="acts"><button class="btn pri sm" data-modal="m-just">Justificar</button></div></td></tr>
+      <tr class="hl-e"><td><div class="person"><span class="avatar">RQ</span><div><div class="nm">Rosa Quelal</div><div class="sub">Cajera</div></div></div></td><td>Agencia Huaca</td><td>12/11/2026</td><td><span class="badge err">Entrada</span></td><td>13:02 · 14:00 · 17:00</td><td>Automático</td><td><span class="badge err">Sin justificar</span></td><td><div class="acts"><button class="btn pri sm" data-modal="m-just">Justificar</button></div></td></tr>
+      <tr class="hl-e"><td><div class="person"><span class="avatar">FR</span><div><div class="nm">Fernando Rosero</div><div class="sub">Oficial de Crédito</div></div></div></td><td>Agencia Quito</td><td>11/11/2026</td><td><span class="badge err">Entrada almuerzo</span></td><td>08:00 · 13:01 · 17:03</td><td>BIO-08 sin conexión</td><td><span class="badge warn">En revisión</span></td><td><div class="acts"><button class="btn pri sm" data-modal="m-just">Justificar</button></div></td></tr>
+    </tbody></table></div></div>
+    <div class="tab-panel" data-group="in" data-tab="i"><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Colaborador</th><th>Fecha</th><th>Novedad registrada</th><th>Tratamiento</th><th></th></tr></thead><tbody>
+      <tr><td class="b">Fernando Rosero</td><td>10/11/2026</td><td>—</td><td><span class="badge err">Descuento 1 día</span></td><td><div class="acts"><button class="btn out sm" data-modal="m-just">Justificar</button></div></td></tr>
+      <tr><td class="b">Kevin Castro</td><td>06/11/2026</td><td>Permiso médico sin respaldo</td><td><span class="badge warn">Pendiente</span></td><td><div class="acts"><button class="btn out sm" data-modal="m-just">Justificar</button></div></td></tr>
+      <tr><td class="b">Marco Yépez</td><td>05/11/2026</td><td>Paternidad (registrada tarde)</td><td><span class="badge ok">Justificada</span></td><td></td></tr></tbody></table></div></div>
+    <div class="tab-panel" data-group="in" data-tab="a"><div class="tbl-wrap"><table class="tbl dense"><thead><tr><th>Colaborador</th><th>Fecha</th><th class="r">Minutos</th><th>Acumulado mes</th><th>Tratamiento</th></tr></thead><tbody>
+      <tr><td class="b">Diana Cuastumal</td><td>13/11/2026</td><td class="r">14</td><td>32 min</td><td><span class="badge warn">Por justificar</span></td></tr>
+      <tr><td class="b">Gabriela Pozo</td><td>12/11/2026</td><td class="r">22</td><td>61 min</td><td><span class="badge err">Descuento nómina</span></td></tr>
+      <tr><td class="b">Jorge Imbaquingo</td><td>13/11/2026</td><td class="r">6</td><td>6 min</td><td><span class="badge ok">Justificado</span></td></tr></tbody></table></div></div>
+    <div class="tab-panel" data-group="in" data-tab="j"><div class="empty">19 justificaciones aprobadas en noviembre · ver bitácora</div></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-just"><div class="modal"><div class="modal-h"><h2>Justificar omisión · Luis Enríquez</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b"><div class="kv"><span>Fecha</span><span>13/11/2026 · Matriz Tulcán</span></div><div class="kv"><span>Marcación faltante</span><span>Salida almuerzo</span></div>
+    <div class="grid g2"><div class="fld"><label>Tipo de justificación <span class="req">*</span></label><div class="inp"><select><option>Olvido de marcación</option><option>Falla del biométrico</option><option>Comisión de servicios</option><option>Permiso</option></select><i data-i="chevron"></i></div></div><div class="fld"><label>Hora real</label><div class="inp"><input value="13:00"><i data-i="reloj"></i></div></div>
+      <div class="fld span2"><label>Detalle <span class="req">*</span></label><textarea class="ta">Salió a almorzar con normalidad; el jefe inmediato confirma la hora.</textarea></div>
+      <div class="fld span2"><label>Tratamiento</label><div class="seg"><button class="on">Justificar sin descuento</button><button>Cargo a vacaciones (decisión de TH)</button><button>Descuento en nómina</button></div></div></div>
+    <div class="note"><i data-i="info"></i><span class="f1 small">Las inasistencias injustificadas no se cargan automáticamente a vacaciones (configurable · H-04).</span></div>
+    <div class="upload"><i data-i="subir"></i><div class="b" style="color:var(--verde-o)">Adjuntar respaldo (opcional)</div></div></div>
+  <div class="modal-f"><button class="btn gho" data-close>Cancelar</button><button class="btn pri" data-toast="Omisión justificada · registrada en bitácora"><i data-i="check"></i>Justificar</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

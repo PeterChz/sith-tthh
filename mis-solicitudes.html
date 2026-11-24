@@ -1,0 +1,41 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mis solicitudes · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="missol" data-ruta="Autoservicio / Mis solicitudes">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Mis solicitudes</h1><p>Seguimiento de permisos, vacaciones y horas extras</p></div>
+    <a class="btn out" href="vacaciones.html"><i data-i="calendario"></i>Solicitar vacaciones</a><a class="btn pri" href="solicitud-permiso.html"><i data-i="mas"></i>Nuevo permiso</a></div>
+  <div class="kpis">
+    <div class="kpi nar"><span class="ic"><i data-i="reloj"></i></span><div><div class="small muted">Pendientes</div><div class="v">1</div><div class="d">Esperando respuesta del jefe (24 h)</div></div></div>
+    <div class="kpi"><span class="ic"><i data-i="check"></i></span><div><div class="small muted">Aprobadas (2026)</div><div class="v">14</div><div class="d">31 h de permiso · 10 días vacaciones</div></div></div>
+    <div class="kpi roj"><span class="ic"><i data-i="cerrar"></i></span><div><div class="small muted">Rechazadas</div><div class="v">1</div><div class="d">Ver motivo en el detalle</div></div></div>
+    <div class="kpi azul"><span class="ic"><i data-i="retorno"></i></span><div><div class="small muted">Retornos por registrar</div><div class="v">0</div><div class="d">Todo al día</div></div></div>
+  </div>
+  <div class="card">
+    <div class="row ae g12">
+      <div class="fld" style="max-width:180px"><label>Tipo</label><div class="inp"><select><option>Todos</option><option>Permiso</option><option>Vacaciones</option><option>Horas extras</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld" style="max-width:180px"><label>Estado</label><div class="inp"><select><option>Todos</option><option>Borrador</option><option>Pendiente</option><option>Aprobada</option><option>Rechazada</option><option>Vencida</option><option>Anulada</option><option>En curso</option><option>Retornado</option></select><i data-i="chevron"></i></div></div>
+      <div class="fld" style="max-width:160px"><label>Desde</label><div class="inp"><input value="01/01/2026"><i data-i="calendario"></i></div></div>
+      <div class="fld" style="max-width:160px"><label>Hasta</label><div class="inp"><input value="31/12/2026"><i data-i="calendario"></i></div></div>
+      <span class="f1"></span><button class="btn sec"><i data-i="buscar"></i>Consultar</button></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Solicitud</th><th>Tipo</th><th>Detalle</th><th>F. inicio</th><th>F. fin</th><th>Tiempo</th><th class="c">Jefe</th><th class="c">TH notificado</th><th>Estado</th><th></th></tr></thead><tbody>
+      <tr><td class="b">50472</td><td>Vacaciones</td><td>Viaje familiar</td><td>02/12/2026</td><td>06/12/2026</td><td>5 días</td><td class="c"><input type="checkbox" checked disabled></td><td class="c"><input type="checkbox" checked disabled></td><td><span class="badge ok">Aprobada</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="b">50468</td><td>Permiso médico</td><td>Cita IESS traumatología</td><td>18/11/2026</td><td>18/11/2026</td><td>4 h</td><td class="c"><input type="checkbox" disabled></td><td class="c"><input type="checkbox" disabled></td><td><span class="badge warn">Pendiente</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button><button class="act no" data-toast="Solicitud anulada"><i data-i="cerrar"></i></button></div></td></tr>
+      <tr><td class="b">50447</td><td>Compensación</td><td>Horas por feria de crédito</td><td>08/11/2026</td><td>08/11/2026</td><td>3 h</td><td class="c"><input type="checkbox" checked disabled></td><td class="c"><input type="checkbox" checked disabled></td><td><span class="badge ok">Aprobada</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="b">50311</td><td>Permiso particular</td><td>Trámite bancario</td><td>21/10/2026</td><td>21/10/2026</td><td>2 h</td><td class="c"><input type="checkbox" checked disabled></td><td class="c"><input type="checkbox" checked disabled></td><td><span class="badge info">Retornado</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="b">49930</td><td>Permiso particular</td><td>Matriculación vehicular</td><td>15/09/2026</td><td>15/09/2026</td><td>3 h</td><td class="c"><input type="checkbox" disabled></td><td class="c"><input type="checkbox" disabled></td><td><span class="badge err">Rechazada</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="b">50490</td><td>Permiso particular</td><td>Trámite notarial</td><td>27/11/2026</td><td>27/11/2026</td><td>2 h</td><td class="c">—</td><td class="c">—</td><td><span class="badge neu">Borrador</span></td><td><div class="acts"><a class="act" href="solicitud-permiso.html"><i data-i="editar"></i></a></div></td></tr>
+      <tr><td class="b">49701</td><td>Permiso particular</td><td>Cita odontológica</td><td>02/09/2026</td><td>02/09/2026</td><td>1 h</td><td class="c">—</td><td class="c">—</td><td><span class="badge neu">Anulada</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button></div></td></tr>
+      <tr><td class="b">49512</td><td>Vacaciones</td><td>Vacaciones anuales</td><td>03/08/2026</td><td>07/08/2026</td><td>5 días</td><td class="c"><input type="checkbox" checked disabled></td><td class="c"><input type="checkbox" checked disabled></td><td><span class="badge ok">Aprobada</span></td><td><div class="acts"><button class="act" data-modal="m-det"><i data-i="ojo"></i></button></div></td></tr>
+    </tbody></table></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-det"><div class="modal"><div class="modal-h"><h2>Solicitud N.º 50472 · Vacaciones</h2><span class="badge ok">Aprobada</span><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b">
+    <div class="grid g3"><div class="kv" style="flex-direction:column"><span>Colaborador</span><span style="text-align:left">Andrea Paspuel Rosero</span></div><div class="kv" style="flex-direction:column"><span>Período</span><span style="text-align:left">02/12 – 06/12/2026</span></div><div class="kv" style="flex-direction:column"><span>Días</span><span style="text-align:left">5 laborables</span></div></div>
+    <div class="section-t"><i data-i="bitacora"></i>Historial de aprobación</div>
+    <div class="list-item"><span class="ic-box ok"><i data-i="check"></i></span><div class="f1"><div class="b">Solicitud generada</div><div class="small muted">Andrea Paspuel · 10/11/2026 09:12</div></div></div>
+    <div class="list-item"><span class="ic-box ok"><i data-i="check"></i></span><div class="f1"><div class="b">Aprobada por jefe inmediato</div><div class="small muted">Carlos Benavides · 10/11/2026 15:40 · “Coordinar reemplazo con Gabriela”</div></div></div>
+    <div class="list-item"><span class="ic-box info"><i data-i="calendario"></i></span><div class="f1"><div class="b">Débito de 5 días en el saldo</div><div class="small muted">Se aplica al aprobarse · Talento Humano fue notificado</div></div></div>
+  </div>
+  <div class="modal-f"><button class="btn out" data-close>Cerrar</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

@@ -1,0 +1,53 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mis vacaciones · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="vacaciones" data-ruta="Autoservicio / Mis vacaciones">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Mis vacaciones</h1><p>Saldo en tiempo real · cálculo automático por antigüedad (15 días + 1 por año desde el 5.º año; tope configurable)</p></div>
+    <a class="btn out" href="reporte-vacaciones.html"><i data-i="pdf"></i>Mi saldo en PDF</a></div>
+  <div class="kpis">
+    <div class="kpi"><span class="ic"><i data-i="calendario"></i></span><div><div class="small muted">Saldo disponible</div><div class="v">18,5 días</div><div class="d">Incluye 2 días adicionales por antigüedad</div></div></div>
+    <div class="kpi azul"><span class="ic"><i data-i="tendencia"></i></span><div><div class="small muted">Devengados 2026</div><div class="v">17 días</div><div class="d">1,42 días por mes</div></div></div>
+    <div class="kpi nar"><span class="ic"><i data-i="check"></i></span><div><div class="small muted">Gozados 2026</div><div class="v">10 días</div><div class="d">+ 0,81 días por permisos imputados</div></div></div>
+    <div class="kpi roj"><span class="ic"><i data-i="alerta"></i></span><div><div class="small muted">Por caducar</div><div class="v">3,5 días</div><div class="d">Período 2023–2024 · vence 01/04/2027</div></div></div>
+  </div>
+  <div class="row as">
+    <div class="card" style="width:420px">
+      <div class="card-h"><div class="ttl"><h3>Solicitar vacaciones</h3><p>Aprobación: jefe inmediato → Talento Humano</p></div></div>
+      <div class="grid g2">
+        <div class="fld"><label>Desde <span class="req">*</span></label><div class="inp"><input value="02/12/2026"><i data-i="calendario"></i></div></div>
+        <div class="fld"><label>Hasta <span class="req">*</span></label><div class="inp"><input value="06/12/2026"><i data-i="calendario"></i></div></div>
+        <div class="fld span2"><label>Reemplazo durante tu ausencia</label><div class="inp"><select><option>Gabriela Pozo Arteaga</option></select><i data-i="chevron"></i></div></div>
+        <div class="fld span2"><label>Observación</label><textarea class="ta" style="min-height:64px">Viaje familiar.</textarea></div>
+      </div>
+      <div class="kv"><span>Días laborables solicitados</span><span>5</span></div>
+      <div class="kv"><span>Saldo después de la solicitud</span><span style="color:var(--verde-o)">13,5 días</span></div>
+      <div class="note warn"><i data-i="alerta"></i><span class="f1 small">2 compañeros de Negocios – Matriz tienen vacaciones en esas fechas. Tu jefe validará la cobertura.</span></div>
+      <div class="note"><i data-i="info"></i><span class="f1 small">No se permite adelanto de vacaciones (saldo negativo) · configurable.</span></div>
+      <button class="btn pri" style="justify-content:center" data-toast="Solicitud de vacaciones enviada"><i data-i="enviar"></i>Enviar solicitud</button>
+    </div>
+    <div class="col f1">
+      <div class="card">
+        <div class="card-h"><div class="ttl"><h3>Diciembre 2026</h3><p>Tu solicitud y las de tu equipo</p></div>
+          <div class="legend"><span style="--c:var(--verde)">Mis vacaciones</span><span style="--c:var(--naranja)">Equipo</span><span style="--c:var(--azul)">Feriado</span></div></div>
+        <div class="mini-cal" id="cal"></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><div class="ttl"><h3>Movimientos del saldo</h3><p>Acreditaciones automáticas, vacaciones gozadas y permisos imputados</p></div></div>
+        <div class="tbl-wrap"><table class="tbl dense"><thead><tr><th>Año</th><th>Tipo</th><th>Comentario</th><th>Fecha</th><th class="r">Días</th><th>Período</th></tr></thead><tbody>
+          <tr><td>2026</td><td><span class="badge ok">Acreditación</span></td><td>Saldo generado en pagos nómina mes octubre</td><td>31/10/2026</td><td class="r">+1,42</td><td>2026–2027</td></tr>
+          <tr><td>2026</td><td><span class="badge warn">Permiso</span></td><td>Permiso particular 21/10 · 120 min</td><td>21/10/2026</td><td class="r" style="color:var(--rojo)">−0,25</td><td>2025–2026</td></tr>
+          <tr><td>2026</td><td><span class="badge ok">Acreditación</span></td><td>Saldo generado en pagos nómina mes septiembre</td><td>30/09/2026</td><td class="r">+1,42</td><td>2026–2027</td></tr>
+          <tr><td>2026</td><td><span class="badge info">Vacaciones</span></td><td>Vacaciones anuales 03/08 – 07/08</td><td>07/08/2026</td><td class="r" style="color:var(--rojo)">−5,00</td><td>2025–2026</td></tr>
+          <tr><td>2026</td><td><span class="badge neu">Ajuste manual</span></td><td>Liquidación de vacaciones 2026-08-20 (TH)</td><td>20/08/2026</td><td class="r" style="color:var(--rojo)">−1,00</td><td>2024–2025</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/app.js"></script>
+<script>
+const h=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];let s=h.map(x=>`<div class="h">${x}</div>`).join('');
+const pre=[30];for(const p of pre)s+=`<div class="d o">${p}</div>`;
+for(let d=1;d<=31;d++){let c='';if(d>=2&&d<=6)c='v';if([14,15,16,22,23].includes(d))c='p';if(d===25)c='f';s+=`<div class="d ${c}">${d}</div>`;}
+for(let d=1;d<=3;d++)s+=`<div class="d o">${d}</div>`;document.getElementById('cal').innerHTML=s;
+</script>
+</body></html>

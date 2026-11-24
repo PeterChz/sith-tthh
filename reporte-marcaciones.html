@@ -1,0 +1,19 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reporte de marcaciones reales · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body class="report-body" data-shell="none">
+<main class="content" style="padding:0;gap:0">
+<div class="report-tools"><a class="btn sm" style="background:rgba(255,255,255,.12);color:#fff" href="reportes.html"><i data-i="chevronL"></i>Volver</a><span class="f1">Plantilla · Reporte de marcaciones reales · A4 horizontal</span><button class="btn sm out"><i data-i="excel"></i>Excel</button><button class="btn sm pri" onclick="print()"><i data-i="imprimir"></i>Imprimir / PDF</button></div>
+<div class="sheet land">
+  <div class="rp-head"><img src="assets/img/logo-completo.png" alt=""><div class="t"><b>TALENTO HUMANO</b><b>MARCACIONES REALES DEL BIOMÉTRICO</b></div><div class="meta">Generado: 13/11/2026 09:20<br>Usuario: landrade<br>Página 1 de 14</div></div>
+  <div class="rp-filters"><span><b>FECHA INICIO:</b> 09/11/2026</span><span><b>FECHA FIN:</b> 13/11/2026</span><span><b>DISPOSITIVO:</b> Todos</span><span><b>COLABORADOR:</b> Todos</span></div>
+  <table class="rp"><thead><tr><th>Cód. bio.</th><th>Cédula</th><th>Nombre</th><th>Agencia</th><th>Fecha</th><th>Día</th><th>Marca 1</th><th>Marca 2</th><th>Marca 3</th><th>Marca 4</th><th>Marca 5</th><th>Dispositivo</th><th>Método</th><th class="c">N.º marcas</th></tr></thead><tbody id="rows"></tbody></table>
+  <div class="rp-foot"><span>Las marcaciones se muestran tal como las registró el dispositivo, sin interpretación ni redondeo.</span><span>SITH · Coop Tulcán</span></div>
+</div>
+</main>
+<script src="assets/js/app.js"></script>
+<script>
+const P=[['1093','0401•••512','Paspuel Rosero Andrea','Matriz Tulcán','BIO-01','Huella'],['1412','0401•••309','Cuastumal Ruano Diana','Matriz Tulcán','BIO-01','Rostro'],['1533','1724•••016','Enríquez Calderón Luis','Matriz Tulcán','BIO-01','Huella'],['1157','1003•••644','Imbaquingo Pozo Jorge','Cayambe','BIO-07','Tarjeta']];
+const D=[['09/11','LUNES'],['10/11','MARTES'],['11/11','MIÉRCOLES'],['12/11','JUEVES'],['13/11','VIERNES']];let h='';
+P.forEach((p,i)=>{h+=`<tr class="grp"><td colspan="14">${p[2]} · ${p[3]}</td></tr>`;D.forEach(([f,d],j)=>{const m=['07:5'+((i+j)%9)+':1'+j,'13:0'+j+':4'+i,'1'+(3+((i+j)%2))+':5'+j+':0'+i,'17:0'+(i+j)%9+':2'+j];if(i===2&&j===4)m[1]='';const extra=(i===2&&j===4)?'07:58:09':'';const n=m.filter(Boolean).length+(extra?1:0);h+=`<tr><td>${p[0]}</td><td>${p[1]}</td><td>${p[2]}</td><td>${p[3]}</td><td>${f}/2026</td><td>${d}</td><td>${m[0]}</td><td>${extra||m[1]}</td><td>${m[2]}</td><td>${m[3]}</td><td></td><td>${p[4]}</td><td>${p[5]}</td><td class="c ${n!==4?'late':''}">${n}</td></tr>`;});});
+document.getElementById('rows').innerHTML=h;
+</script>
+</body></html>

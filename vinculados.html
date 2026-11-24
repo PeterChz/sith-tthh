@@ -1,0 +1,35 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vinculados · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="vinculados" data-ruta="Gestión de personal / Vinculados">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Vinculados</h1><p>Parientes hasta 4.º grado de consanguinidad y 2.º de afinidad · control de conflicto de interés y nepotismo</p></div>
+    <a class="btn out" href="reportes.html"><i data-i="pdf"></i>Reporte de vinculados</a><button class="btn pri" data-modal="m-vin"><i data-i="mas"></i>Nuevo vinculado</button></div>
+  <div class="note warn"><i data-i="alerta"></i><span class="f1">Declaración bajo juramento obligatoria: el colaborador debe declarar si tiene parientes o cónyuge trabajando en la cooperativa o en entidades del mismo grupo económico.</span></div>
+  <div class="card">
+    <div class="row ae g12"><div class="fld"><label>Empleado</label><div class="inp"><input value="93 · Andrea Paspuel Rosero"><i data-i="buscar"></i></div></div>
+      <div class="fld" style="max-width:220px"><label>Tipo</label><div class="inp"><select><option>Todos</option><option>Administración</option><option>No definido</option></select><i data-i="chevron"></i></div></div><button class="btn sec"><i data-i="buscar"></i>Consultar</button></div>
+    <div class="row ac g16" style="background:var(--bg);border-radius:8px;padding:12px 14px">
+      <span class="b f1">¿Tiene parientes o cónyuge laborando en la cooperativa o su grupo económico?</span>
+      <div class="seg" style="width:180px"><button class="on">Sí</button><button>No</button></div>
+      <span class="badge ok">Declarado 10/11/2026</span></div>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Código</th><th>Tipo</th><th>Identificación</th><th>Nombres</th><th>Parentesco</th><th>Consanguinidad</th><th>Género</th><th>F. nacimiento</th><th>F. vinculación</th><th>Estado</th><th></th></tr></thead><tbody>
+      <tr><td>299</td><td>No definido</td><td>0401•••492</td><td class="b">Rosa Rosero Ortega</td><td>Madre</td><td>1 grado</td><td>Femenino</td><td>1966-03-07</td><td>2019-02-03</td><td><span class="badge ok">Activo</span></td><td><div class="acts"><button class="act" data-modal="m-vin"><i data-i="editar"></i></button><button class="act no"><i data-i="borrar"></i></button></div></td></tr>
+      <tr><td>300</td><td>No definido</td><td>0401•••186</td><td class="b">Luis Paspuel Rosero</td><td>Hermano(a)</td><td>2 grado</td><td>Masculino</td><td>1995-03-07</td><td>2019-02-03</td><td><span class="badge ok">Activo</span></td><td><div class="acts"><button class="act" data-modal="m-vin"><i data-i="editar"></i></button><button class="act no"><i data-i="borrar"></i></button></div></td></tr>
+      <tr><td>727</td><td>Administración</td><td>0401•••984</td><td class="b">Narváez Pozo Esteban</td><td>Cuñado(a)</td><td>2 afinidad</td><td>Masculino</td><td>1990-03-07</td><td>2022-01-24</td><td><span class="badge info">Trabaja en Coop</span></td><td><div class="acts"><button class="act" data-modal="m-vin"><i data-i="editar"></i></button><button class="act no"><i data-i="borrar"></i></button></div></td></tr>
+      <tr><td>5565</td><td>Administración</td><td>0400•••464</td><td class="b">Marco Ruiz Benavides</td><td>Esposo(a)</td><td>Titular</td><td>Masculino</td><td>1990-05-02</td><td>2019-02-03</td><td><span class="badge ok">Activo</span></td><td><div class="acts"><button class="act" data-modal="m-vin"><i data-i="editar"></i></button><button class="act no"><i data-i="borrar"></i></button></div></td></tr>
+      <tr><td>5566</td><td>Administración</td><td>0400•••705</td><td class="b">Fernando Ruiz Cárdenas</td><td>Suegro(a)</td><td>1 afinidad</td><td>Masculino</td><td>1962-05-06</td><td>2019-02-03</td><td><span class="badge ok">Activo</span></td><td><div class="acts"><button class="act" data-modal="m-vin"><i data-i="editar"></i></button><button class="act no"><i data-i="borrar"></i></button></div></td></tr>
+    </tbody></table></div>
+  </div>
+</main>
+<div class="modal-bg" id="m-vin"><div class="modal"><div class="modal-h"><h2>Vinculado</h2><button data-close class="act"><i data-i="cerrar"></i></button></div>
+  <div class="modal-b"><div class="grid g2">
+    <div class="fld"><label>Tipo de documento <span class="req">*</span></label><div class="inp"><select><option>Cédula</option></select><i data-i="chevron"></i></div></div><div class="fld"><label>Identificación <span class="req">*</span></label><div class="inp"><input></div></div>
+    <div class="fld"><label>Nombres <span class="req">*</span></label><div class="inp"><input></div></div><div class="fld"><label>Primer apellido <span class="req">*</span></label><div class="inp"><input></div></div>
+    <div class="fld"><label>Segundo apellido</label><div class="inp"><input></div></div><div class="fld"><label>Email</label><div class="inp"><input></div></div>
+    <div class="fld"><label>Fecha de nacimiento <span class="req">*</span></label><div class="inp"><input><i data-i="calendario"></i></div></div><div class="fld"><label>Tipo pariente <span class="req">*</span></label><div class="inp"><select><option>Madre</option><option>Padre</option><option>Hermano(a)</option><option>Esposo(a)</option><option>Hijo(a)</option><option>Cuñado(a)</option><option>Suegro(a)</option></select><i data-i="chevron"></i></div></div>
+    <div class="fld"><label>Consanguinidad <span class="req">*</span></label><div class="inp"><select><option>Titular</option><option>1 grado</option><option>2 grado</option><option>1 afinidad</option><option>2 afinidad</option><option>No definido</option></select><i data-i="chevron"></i></div></div><div class="fld"><label>Género <span class="req">*</span></label><div class="inp"><select><option>Femenino</option><option>Masculino</option></select><i data-i="chevron"></i></div></div>
+    <div class="fld"><label>Estado civil</label><div class="inp"><select><option>Soltero</option></select><i data-i="chevron"></i></div></div><div class="fld"><label>Nivel académico</label><div class="inp"><select><option>Sin estudios</option></select><i data-i="chevron"></i></div></div>
+    <div class="fld"><label>Fecha de vinculación <span class="req">*</span></label><div class="inp"><input value="13/11/2026"><i data-i="calendario"></i></div></div><div class="fld"><label>Estado</label><div class="inp"><select><option>Activo</option></select><i data-i="chevron"></i></div></div></div>
+    <label class="chk"><input type="checkbox"> Trabaja en la cooperativa o en el grupo económico</label></div>
+  <div class="modal-f"><button class="btn dan" data-close>Eliminar</button><span class="f1"></span><button class="btn gho" data-close>Cancelar</button><button class="btn pri" data-toast="Vinculado registrado"><i data-i="check"></i>Confirmar</button></div></div></div>
+<script src="assets/js/app.js"></script>
+</body></html>

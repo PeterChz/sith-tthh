@@ -1,0 +1,44 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Acreditación y roles · SITH Coop Tulcán</title><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="acreditacion" data-ruta="Nómina / Acreditación y roles" data-role="th">
+<main class="content">
+  <div class="page-head"><div class="ttl"><h1>Acreditación de sueldos y roles de pago</h1><p>Octubre 2026 · nómina aprobada por Gerencia el 30/10/2026 16:42</p></div>
+    <button class="btn out" data-toast="Archivo contable generado para importar en el CORE"><i data-i="libro"></i>Archivo contable para el CORE</button><button class="btn pri" data-toast="Archivo plano generado: PAGO_NOMINA_202610.txt"><i data-i="descargar"></i>Generar archivo plano</button></div>
+  <div class="kpis">
+    <div class="kpi"><span class="ic"><i data-i="banco"></i></span><div><div class="small muted">Total a acreditar</div><div class="v">$ 409.912</div><div class="d">246 transferencias</div></div></div>
+    <div class="kpi azul"><span class="ic"><i data-i="check"></i></span><div><div class="small muted">Cuentas Coop Tulcán</div><div class="v">231</div><div class="d">Acreditación interna</div></div></div>
+    <div class="kpi nar"><span class="ic"><i data-i="enviar"></i></span><div><div class="small muted">Otras instituciones</div><div class="v">15</div><div class="d">Vía SPI · Banco Central</div></div></div>
+    <div class="kpi"><span class="ic"><i data-i="correo"></i></span><div><div class="small muted">Roles enviados</div><div class="v">246 / 246</div><div class="d">Con firma simple interna</div></div></div>
+  </div>
+  <div class="row as">
+    <div class="card f1">
+      <div class="tabs" data-tabs="ac"><button class="on" data-tab="t">Transferencias</button><button data-tab="r">Roles de pago</button><button data-tab="a">Archivo plano</button></div>
+      <div class="tab-panel on" data-group="ac" data-tab="t"><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Colaborador</th><th>Banco</th><th>Tipo</th><th>Cuenta</th><th class="r">Valor</th><th>Estado</th></tr></thead><tbody>
+        <tr><td class="b">Andrea Paspuel Rosero</td><td>Coop Tulcán</td><td>Ahorros</td><td>•••• 4512</td><td class="r">$ 1.284,36</td><td><span class="badge ok">Acreditado</span></td></tr>
+        <tr><td class="b">Carlos Benavides Mora</td><td>Coop Tulcán</td><td>Ahorros</td><td>•••• 0871</td><td class="r">$ 1.754,20</td><td><span class="badge ok">Acreditado</span></td></tr>
+        <tr><td class="b">Fernando Rosero Cadena</td><td>Banco Pichincha</td><td>Corriente</td><td>•••• 2265</td><td class="r">$ 1.102,10</td><td><span class="badge info">Enviado SPI</span></td></tr>
+        <tr class="hl-e"><td class="b">Kevin Castro</td><td>Produbanco</td><td>Ahorros</td><td>•••• 7713</td><td class="r">$ 905,44</td><td><span class="badge err">Rechazado · cuenta inactiva</span></td></tr>
+        <tr><td class="b">Gabriela Pozo Arteaga</td><td>Coop Tulcán</td><td>Ahorros</td><td>•••• 0733</td><td class="r">$ 839,51</td><td><span class="badge ok">Acreditado</span></td></tr></tbody></table></div></div>
+      <div class="tab-panel" data-group="ac" data-tab="r"><div class="row ac g12"><span class="f1 muted">Roles con firma simple interna enviados al correo institucional</span><button class="btn out sm" data-toast="Reenvío programado"><i data-i="correo"></i>Reenviar seleccionados</button></div>
+        <div class="tbl-wrap"><table class="tbl dense"><thead><tr><th>Colaborador</th><th>Correo</th><th>Enviado</th><th>Leído</th><th></th></tr></thead><tbody>
+          <tr><td class="b">Andrea Paspuel</td><td>apaspuel@cooptulcan.fin.ec</td><td>31/10 21:10</td><td><span class="badge ok">Sí</span></td><td><div class="acts"><a class="act" href="rol-pagos.html"><i data-i="ojo"></i></a></div></td></tr>
+          <tr><td class="b">Diana Cuastumal</td><td>dcuastumal@cooptulcan.fin.ec</td><td>31/10 21:10</td><td><span class="badge neu">No</span></td><td><div class="acts"><a class="act" href="rol-pagos.html"><i data-i="ojo"></i></a></div></td></tr></tbody></table></div></div>
+      <div class="tab-panel" data-group="ac" data-tab="a"><div class="code">CABECERA|COOPTULCAN|NOMINA|202610|246|409912.37
+D|0401•••512|PASPUEL ROSERO ANDREA|AHO|4100••••4512|1284.36
+D|0402•••871|BENAVIDES MORA CARLOS|AHO|4100••••0871|1754.20
+D|0400•••265|ROSERO CADENA FERNANDO|CTE|2200••••2265|1102.10
+...
+PIE|246|409912.37|HASH:7F3A91C2</div></div>
+    </div>
+    <div class="col" style="width:330px">
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Aprobaciones</h3></div></div>
+        <div class="list-item"><span class="ic-box ok"><i data-i="check"></i></span><div class="f1"><div class="b">Talento Humano</div><div class="small muted">Lucía Andrade · 29/10 17:05</div></div></div>
+        <div class="list-item"><span class="ic-box ok"><i data-i="check"></i></span><div class="f1"><div class="b">Contabilidad</div><div class="small muted">Jefe de Contabilidad · 30/10 10:22</div></div></div>
+        <div class="list-item"><span class="ic-box ok"><i data-i="check"></i></span><div class="f1"><div class="b">Gerencia General</div><div class="small muted">30/10 16:42</div></div></div></div>
+      <div class="card"><div class="card-h"><div class="ttl"><h3>Tesorería</h3></div></div>
+        <div class="kv"><span>Formato</span><span>TXT · Coop Tulcán / SPI</span></div><div class="kv"><span>Generado</span><span>31/10/2026 09:14</span></div><div class="kv"><span>Hash de control</span><span>7F3A91C2</span></div>
+        <div class="note err"><i data-i="alerta"></i><span class="f1 small">1 transferencia rechazada. Actualiza la cuenta en la ficha financiera y regenera.</span></div></div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/app.js"></script>
+</body></html>
