@@ -47,6 +47,6 @@
 <script>
   let sel='th';
   document.querySelectorAll('.role').forEach(r=>r.onclick=()=>{document.querySelectorAll('.role').forEach(x=>x.classList.remove('on'));r.classList.add('on');sel=r.dataset.r;});
-  document.getElementById('go').onclick=()=>{localStorage.setItem('sith-role',sel);location.href={th:'index.html',jefe:'bandeja-jefatura.html',emp:'portal.html'}[sel];};
+  document.getElementById('go').onclick=()=>{localStorage.setItem('sith-role',sel);location.href={th:'dashboard.html',jefe:'bandeja-jefatura.html',emp:'portal.html'}[sel];};
 </script>
 </body></html>

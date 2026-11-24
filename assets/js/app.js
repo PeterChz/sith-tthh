@@ -73,13 +73,13 @@
   window.SITH = { svg };
 
   const ROLES = {
-    th:  { nombre:'Lucía Andrade', cargo:'Administrador TH', ini:'LA', perfil:'TALENTO HUMANO', home:'index.html' },
+    th:  { nombre:'Lucía Andrade', cargo:'Administrador TH', ini:'LA', perfil:'TALENTO HUMANO', home:'dashboard.html' },
     jefe:{ nombre:'Carlos Benavides', cargo:'Jefe de Agencia Ibarra', ini:'CB', perfil:'JEFE DEPARTAMENTAL', home:'bandeja-jefatura.html' },
     emp: { nombre:'Andrea Paspuel', cargo:'Oficial de Negocios', ini:'AP', perfil:'EMPLEADO', home:'portal.html' },
   };
   const MENU = {
     th: [
-      ['General', [['dashboard','Dashboard','index.html','dashboard'],['portal','Mi portal','portal.html','persona']]],
+      ['General', [['dashboard','Dashboard','dashboard.html','dashboard'],['portal','Mi portal','portal.html','persona']]],
       ['Gestión de personal', [['colaboradores','Colaboradores','colaboradores.html','usuarios'],['vinculacion','Vinculación laboral','vinculacion.html','maleta'],['vinculados','Vinculados','vinculados.html','enlace'],['acciones','Acciones de personal','acciones-personal.html','firma'],['patrimonio','Patrimonio','patrimonio.html','casa'],['capacitaciones','Capacitaciones','capacitaciones.html','libro'],['evaluacion','Evaluación de desempeño','evaluacion.html','medalla','En espera']]],
       ['Asistencia', [['asistencia','Consulta de asistencia','asistencia.html','reloj'],['marcaciones','Marcaciones reales','marcaciones.html','huella'],['inasistencias','Inasistencias','inasistencias.html','alerta',4],['horas','Horas extras','horas-extras.html','horasExtra']]],
       ['Novedades', [['permisos','Permisos y licencias','permisos.html','documento',9],['vacgest','Saldos de vacaciones','vacaciones-gestion.html','calendario'],['retornos','Control de retornos','retornos.html','retorno']]],
